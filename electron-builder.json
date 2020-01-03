@@ -1,0 +1,41 @@
+{
+    "appId": "fr.toinane.electrontemplate",
+    "productName": "Electron Template",
+    "compression": "maximum",
+    "copyright": "Copyright @Toinane",
+    "directories": {
+        "output": "dist"
+    },
+    "files": ["**/*"],
+    "mac": {
+        "category": "public.app-category.graphics-design",
+        "icon": "assets/icon.icns",
+        "type": "distribution",
+        "extendInfo": {
+            "NSRequiresAquaSystemAppearance": "false"
+        }
+    },
+    "dmg": {
+        "icon": "assets/volumeIcon.icns",
+        "background": "assets/volumeBackground.png",
+        "window": {
+            "width": 540,
+            "height": 380
+        }
+    },
+    "linux": {
+        "icon": "./assets/icon.png",
+        "synopsis": "Electron Template",
+        "category": "Graphics"
+    },
+    "snap": {
+        "plugs": ["default", "desktop"]
+    },
+    "win": {
+        "icon": "assets/icon.ico"
+    },
+    "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true
+    }
+}
