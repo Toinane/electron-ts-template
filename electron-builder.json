@@ -16,12 +16,7 @@
         }
     },
     "dmg": {
-        "icon": "assets/volumeIcon.icns",
-        "background": "assets/volumeBackground.png",
-        "window": {
-            "width": 540,
-            "height": 380
-        }
+        "icon": "assets/volumeIcon.icns"
     },
     "linux": {
         "icon": "./assets/icon.png",

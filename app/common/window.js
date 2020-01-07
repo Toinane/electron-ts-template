@@ -14,7 +14,7 @@ class window {
             webPreferences: {
                 nodeIntegration: false,
                 sandbox: true,
-                contextIsolation: true,
+                enableRemoteModule: false,
                 preload: path.join(
                     __dirname,
                     '..',
@@ -31,7 +31,7 @@ class window {
             ...this.securityParams,
             ...this.windowParams
         });
-        console.log(__dirname);
+
         this.window.loadURL(
             'file://' +
                 path.join(
@@ -42,7 +42,10 @@ class window {
                     `${this.name}.html`
                 )
         );
+
         this.window.on('closed', this.closeWindow);
+
+        this.events();
 
         return this.window;
     }
@@ -59,6 +62,8 @@ class window {
             return this.createWindow();
         }
     }
+
+    events() {}
 
     sendEvent(channel, ...args) {
         if (!this.window) return;

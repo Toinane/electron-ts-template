@@ -1,10 +1,41 @@
 require('./common/error.helper');
-const { app } = require('electron');
+const { app, shell } = require('electron');
+// const { URL } = require('url');
 
 const example = require('./windows/example');
 
-function initApp() {
+const initApp = () => {
     example.showBrowserWindow();
-}
+};
 
 app.on('ready', initApp);
+
+/**
+ * ==========================
+ * Security options
+ * ==========================
+ */
+
+/**
+ * We block the creation of new window and open the link in a good navigator.
+ */
+app.on('web-contents-created', (event, contents) => {
+    contents.on('new-window', async (event, navigationUrl) => {
+        // we'll ask the operating system to open this event's url in the default browser.
+        event.preventDefault();
+        console.log(navigationUrl);
+        await shell.openExternal(navigationUrl);
+    });
+});
+
+/**
+ * If your app need to navigate, uncomment the condition and update it.
+ */
+app.on('web-contents-created', (event, contents) => {
+    contents.on('will-navigate', (event, navigationUrl) => {
+        // const parsedUrl = new URL(navigationUrl);
+        // if (parsedUrl.origin !== 'https://example.com') {
+        event.preventDefault();
+        //}
+    });
+});
