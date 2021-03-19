@@ -12,9 +12,7 @@ class window {
 
         this.securityParams = {
             webPreferences: {
-                nodeIntegration: false,
                 sandbox: true,
-                enableRemoteModule: false,
                 preload: path.join(
                     __dirname,
                     '..',
