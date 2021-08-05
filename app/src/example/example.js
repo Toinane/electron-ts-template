@@ -1,6 +1,6 @@
-window.ipc.send('example-start');
+async function loadPage() {
+    const message = await window.api.loadPage();
+    document.querySelector("span").innerHTML = message;
+}
 
-window.ipc.on('example-about', (_, message) => {
-    console.log('detect request from main.');
-    document.querySelector('span').innerHTML = message;
-});
+window.addEventListener("DOMContentLoaded", loadPage);

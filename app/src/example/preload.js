@@ -1,3 +1,5 @@
-const SafeIpcRenderer = require('../common/safeIpcRenderer')
+const { contextBridge, ipcRenderer } = require("electron");
 
-window.ipc = new SafeIpcRenderer(['example-start', 'example-about']);
+contextBridge.exposeInMainWorld("api", {
+    loadPage: () => ipcRenderer.invoke("load-example"),
+});
