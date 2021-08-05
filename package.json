@@ -12,7 +12,7 @@
         "release": "electron-builder --config electron-builder.json"
     },
     "dependencies": {
-        "electron-light-storage": "^1.1.1"
+        "electron-light-storage": "^1.1.2"
     },
     "devDependencies": {
         "electron": "^13.1.8",

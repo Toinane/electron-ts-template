@@ -685,10 +685,10 @@ electron-builder@^22.11.7:
     update-notifier "^5.1.0"
     yargs "^17.0.1"
 
-electron-light-storage@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.npmjs.org/electron-light-storage/-/electron-light-storage-1.1.1.tgz"
-  integrity sha512-LOmUMaB0hk3aP+Xo5n7gM26BwBki2Rkt7PW2jvDWCDQZMIJ5DLNOLbajp3rT+KU/XGF8JH/fCqgGEXZPQ+H+vw==
+electron-light-storage@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/electron-light-storage/-/electron-light-storage-1.1.2.tgz#6635c878e79c25eab895094d1dbdfb260e62a14c"
+  integrity sha512-FP+ckBYZAhymRfz/35LwLjLbN7dTbOQL4nKMSJjbMB+YW3NYJfY3GNQiILxn8r3lY/uC52a8NfUNrhX9EptJTw==
 
 electron-publish@22.11.7:
   version "22.11.7"
