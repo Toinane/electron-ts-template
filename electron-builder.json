@@ -1,9 +1,10 @@
 {
-    "appId": "fr.toinane.electrontemplate",
-    "productName": "Electron Template",
+    "appId": "fr.toinane.electrontstemplate",
+    "productName": "Electron TS Template",
     "copyright": "Copyright © 2021 Toinane",
     "files": ["**/*"],
     "compression": "maximum",
+    "buildDependenciesFromSource": true,
     "directories": {
         "buildResources": "assets",
         "output": "release"
@@ -16,9 +17,9 @@
         "type": "distribution",
         "darkModeSupport": true,
         "extendInfo": {
-            "CFBundleName": "Electron Template",
-            "CFBundleDisplayName": "Electron Template",
-            "CFBundleExecutable": "Electron Template",
+            "CFBundleName": "Electron TS Template",
+            "CFBundleDisplayName": "Electron TS Template",
+            "CFBundleExecutable": "Electron TS Template",
             "CFBundlePackageType": "APPL"
         }
     },
@@ -54,16 +55,17 @@
         "perMachine": false,
         "createDesktopShortcut": true,
         "createStartMenuShortcut": true,
-        "allowToChangeInstallationDirectory": true
+        "allowToChangeInstallationDirectory": true,
+        "artifactName": "${productName}-${version}${arch}-installer.${ext}"
     },
     "linux": {
         "target": ["AppImage", "deb", "freebsd", "tar.gz"],
         "executableName": "electron-template",
         "icon": "./assets/icon.png",
-        "synopsis": "Electron Template",
+        "synopsis": "Electron TS Template",
         "category": "Graphics",
         "desktop": {
-            "Name": "Electron Template",
+            "Name": "Electron TS Template",
             "Type": "Application",
             "Icon": "assets/icon.png",
             "Categories": "Graphics;Utility"

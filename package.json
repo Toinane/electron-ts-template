@@ -1,21 +1,45 @@
 {
-    "name": "electron-template",
-    "productName": "Electron Template",
-    "version": "1.1.0",
-    "description": "Electron Template is a Github Template for Electron",
-    "repository": "git@github.com:Toinane/electron-template.git",
+    "name": "electron-ts-template",
+    "productName": "Electron TS Template",
+    "version": "2.0.0",
+    "description": "Electron TS Template is a Github Template for Electron in Typescript",
+    "repository": "git@github.com:Toinane/electron-ts-template.git",
+    "bugs": "https://github.com/toinane/electron-ts-template/issues",
+    "homepage": "https://github.com/toinane/electron-ts-template",
     "author": "toinane <toinane@crea-that.fr>",
     "license": "MIT",
-    "main": "app/app.js",
-    "scripts": {
-        "start": "electron app/app.js",
-        "release": "electron-builder --config electron-builder.json"
+    "keywords": [
+        "Electron",
+        "Typescript",
+        "Template"
+    ],
+    "os": [
+        "win32",
+        "darwin",
+        "linux"
+    ],
+    "engines": {
+        "node": ">=16"
     },
-    "dependencies": {
-        "electron-light-storage": "^1.1.2"
+    "main": "dist/main.js",
+    "scripts": {
+        "prestart": "webpack --config ./scripts/webpack.config.js",
+        "start": "concurrently -n \"WEBPACK,ELECTRON\" -c \"bgGreen,bgBlue\" \"webpack -w --config ./scripts/webpack.config.js\" \"electron .\"",
+        "release": "yarn prestart && electron-builder --config electron-builder.json"
     },
     "devDependencies": {
-        "electron": "^13.1.8",
-        "electron-builder": "^22.11.7"
+        "@typescript-eslint/eslint-plugin": "^5.4.0",
+        "@typescript-eslint/parser": "^5.4.0",
+        "concurrently": "^6.4.0",
+        "dotenv": "^10.0.0",
+        "electron": "^16.0.2",
+        "electron-builder": "^22.14.5",
+        "eslint": "^8.3.0",
+        "html-webpack-plugin": "^5.5.0",
+        "prettier": "^2.5.0",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.2.4",
+        "webpack": "^5.64.3",
+        "webpack-cli": "^4.9.1"
     }
 }

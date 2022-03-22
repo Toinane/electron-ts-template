@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "module": "commonjs",
+        "target": "ES2020",
+        "sourceMap": true,
+        "strict": true,
+        "allowJs": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "lib": ["es6", "dom"],
+        "allowSyntheticDefaultImports": true,
+        "plugins": []
+    }
+}

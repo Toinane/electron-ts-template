@@ -1,2 +1,3 @@
-# electron-template
-Electron Template
+# electron-ts-template
+
+Electron TS Template
