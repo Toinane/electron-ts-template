@@ -15,7 +15,7 @@
         "electron-light-storage": "^1.1.2"
     },
     "devDependencies": {
-        "electron": "^13.1.8",
+        "electron": "^18.3.7",
         "electron-builder": "^22.11.7"
     }
 }
